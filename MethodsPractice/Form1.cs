@@ -22,6 +22,9 @@ namespace MethodsPractice
             /// TODO - Place method calls here
 
             PrintSignature();
+            RectangleArea();
+            AddNumbers();
+            CalculateArea();
 
         }
 
@@ -39,7 +42,13 @@ namespace MethodsPractice
 
         public void RectangleArea()
         {
+            int width = 5;
+            int height = 7;
+            int area;
 
+            area = width * height;
+
+            q2Output.Text = $"The area of a rectangle is {width} X {height} + {area} uint squared";
         }
 
         /// 3. Create a method to get numbers from q3Num1Input and q3Num2Input,
@@ -47,13 +56,32 @@ namespace MethodsPractice
         /// 
         /// 5 + 4 = 9 
 
+        public void AddNumbers()
+        {
+            int num1 = Convert.ToInt16(q3Num1Input.Text);
+            int num2 = Convert.ToInt16(q3Num2Input.Text);
 
-        
+            int sum = num1 + num2;
+
+            q3Output.Text = $" {num1} + {num2} = {sum}";
+
+        }
+
         /// 4. Create a method to calculate the area of a circle based on  
         /// the radius entered in radiusInput, then display output as follows:
         /// 
         /// The area of a circle with radius of 4 is 50.24 units squared
 
+        public void CalculateArea()
+        {
+            int radius = Convert.ToInt16(radiusInput.Text);
+            double Pi = 3.14;
+
+
+            double area = radius * radius * Pi;
+
+            q4Output.Text = $" The area of a circle with radius of {Pi} X {radius} is {area} units squared"; 
+        }
 
 
         /// 5. 3U Only - Create a method that will determine and display
@@ -64,5 +92,5 @@ namespace MethodsPractice
         /// he largest value is 7
 
 
-    }
+        }
 }
